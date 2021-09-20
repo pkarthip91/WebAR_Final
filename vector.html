@@ -91,6 +91,122 @@
   </div>
   </div>
 
+
+  
+  <div class="select-car-model">
+    <!-- model viewer start -->
+    <model-viewer id="imgSize" 
+      data-js-focus-visible 
+      camera-controls 
+      src=""
+      ar disable-zoom autoplay
+      shadow-intensity="0" 
+      slot="progress-bar exit-webxr-ar-button interaction-prompt" 
+      ar-placement="floor"
+      ar-modes="webxr quick-look" 
+      ar-scale="fixed" 
+      alt="Select Car">
+       <!-- Proceed button start -->
+      <button slot="ar-button" class="hide-apped" id="ar-button">
+        Proceed 2
+      </button>
+      <button class="rounded-circle-btn ar-visible d-none" id="close-model">
+        <i class="fas fa-times"></i>
+      </button>
+
+        <!-- hand loading animation start -->
+      <div id="ar-prompt">
+        <img src="img/hand.png">
+      </div>
+         <!-- model auto tranfromaing rotate start -->
+      <div style="display: none;" id="hide-btn-main" class="right-rounded-btn table-btn">
+        <div class="slider-m btn-img-bg">
+          <div class="slides-mk">
+            <label class="toggle-control-main d-none">
+              <div class="d-none"><input id="roll" value="0" size="3" class="number"></div>
+              <div class="d-none"><input id="pitch" value="0" size="3" class="number"></div>
+              <button class="d-none" id="frame"></button>
+              <div class="ar-visible d-none form-check form-switch">
+                <input class="form-check-input number" type="checkbox" id="yaw" value="270" size="3"
+                  id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+              </div>
+            </label>
+          </div>
+        </div>
+         <!-- model auto tranfromaing rotate start -->
+
+         <!-- camera and size left button start -->
+        <div class="bottom-icons ar-visible d-none">
+          <div class="btn btn-primary chat-bot-icon rounded-circle cars-btn btn-white-opcity margin-top-5 size-icons ">
+            <div class="animate-img">
+              <span>Sizes</span>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-x ">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </div>
+          <button type="button" class="ar-visible d-none btn btn-primary rounded-circle btn-white-opcity">
+            <i class="fas fa-camera"></i>
+          </button>
+        </div>
+         <!-- camera and size left button end -->
+        <!-- up and down start -->
+        <div class="up-down btn-img-bg">
+          <button type="button" class="btn btn-primary rounded-circle btn-white" id="nextAnimation"><i
+            class="fas fa-caret-up"></i></button>
+        <button type="button" class="btn btn-primary rounded-circle btn-white" id="previousAnimationn"><i
+            class="fas fa-caret-down"></i> </button>
+        </div>
+        <!-- up and down end -->
+
+        <!-- Size and color change popup start -->
+        <div class="chat-screen">
+          <div class="chat-mail">
+            <div class="row">
+              <!-- Size change start -->
+              <div class="col-8 size-section" id="sizeChange">
+                <div class="model-slide">
+                  <button type="button" onclick="sizeSportL()"
+                    class="btn btn-primary rounded-circle btn-white d-inline-block size-btn active-color">Alpine</button>
+                  <button type="button" onclick="sizeXXL()"
+                    class="btn btn-primary rounded-circle btn-white d-inline-block size-btn" disabled>XL </button>
+                  <button type="button" onclick="sizeM()"
+                    class="btn btn-primary rounded-circle btn-white d-inline-block size-btn" disabled>M
+                  </button>
+                </div>
+                <div class="model-slide">
+                  <button type="button" onclick="sizeXL()"
+                    class="btn btn-primary rounded-circle btn-white d-inline-block size-btn" disabled>Sport</button>
+                  <button type="button" onclick="sizeSportsXXL()"
+                    class="btn btn-primary rounded-circle btn-white d-inline-block size-btn" disabled>XXL </button>
+                  <button type="button" onclick="sizeSportL()"
+                    class="btn btn-primary rounded-circle btn-white d-inline-block size-btn" disabled>L </button>
+                </div>
+              </div> 
+              <!-- Size change end -->
+
+              <!-- Color change start -->
+              <div class="col-4 color-section" id="colorChangeVariant">
+                <div class="model-slide">
+                  <button type="button" value="./img/Color/Black.png" class="btn btn-primary rounded-circle btn-white d-inline-block color-btn color-black"></button>
+                  <button type="button" value="./img/Color/Grey.png" class="btn btn-primary rounded-circle btn-white d-inline-block color-btn color-gray"> </button>
+                  <button type="button" value="./img/Color/White.png" class="btn btn-primary rounded-circle btn-white d-inline-block color-btn color-white"> </button>
+                </div>
+              </div>
+              <!-- Color change end -->
+            </div>
+          </div>
+        </div>
+         <!-- Size and color change popup End -->
+      </div>
+    </model-viewer>
+     <!-- Model Viewer End -->
+  </div>
+
   </div>
   </div>
   </div>
