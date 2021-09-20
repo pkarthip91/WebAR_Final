@@ -92,7 +92,7 @@
   </div>
 
 
-  <div class="select-car-model" id="vectormodel">
+  <div class="select-car-model">
     <!-- model viewer start -->
     <model-viewer id="imgSize" 
       data-js-focus-visible 
@@ -107,7 +107,7 @@
       alt="Select Car">
        <!-- Proceed button start -->
       <button slot="ar-button" class="hide-apped" id="ar-button">
-        Proceed 2
+        Proceed motion
       </button>
       <button class="rounded-circle-btn ar-visible d-none" id="close-model">
         <i class="fas fa-times"></i>
@@ -239,6 +239,18 @@
         $('.ar-visible').removeClass("d-none")
         document.getElementById("imgSize").style.height = "42px"
       });
+
+       //AR Proceed button click event triggered
+       if (window.location.pathname == "./vector.html") {
+          $("#hide-btn-main").css("display", "block");
+          $("#imgSize").css("opactiy", "0");
+          document.getElementById("imgSize").removeAttribute("src");
+          window.location.reload(true)
+        } else {
+          $("#hide-btn-main").css("display", "none");
+          $("#imgSize").css("height", "42px");
+          document.getElementById("imgSize").removeAttribute("src");
+        }
 
       });
   </script>
