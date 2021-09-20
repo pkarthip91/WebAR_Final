@@ -9,22 +9,35 @@
   <!-- Main Styles Including -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/thule.css">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
+
+
+  <!-- <link rel="stylesheet" href="demo-styles.css"> -->
+  <!-- <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  <script src="./_model-viewer_ Interactive Example_files/focus-visible.js.download" defer=""></script> -->
 </head>
 
 <body id="select-car-page">
   <div class="container pad-15 container-margin">
     <div class="pl-lg-0 pl-auto">
       <div class="col-xs-12 filter-listing-text">
+        <!-- <a class="d-inline-block text-dark mr-3 prev-icon" href="index.html">
+          <i class="fas fa-arrow-left"></i>
+        </a> -->
+        <!-- <h2 class="heading3 d-inline-block mt-6">Select Car</h2> -->
       </div>
     </div>
 
     <div align="center" class="map-responsive">
-      <video id="videoPlay" class="embed-responsive-item" muted controls playsinline autoplay>
+      <video id="videoPlay" class="embed-responsive-item" muted controls playsinline autoplay  >
         <source src="./img/Animation.mp4" type="video/mp4">
       </video>
+      <!-- <img class="img-responsive" src="img/cars/car.PNG"> -->
     </div>
 
     <div id="vehicleSelection" class="select-car row">
@@ -85,20 +98,50 @@
         </div>
       </div>
     </div>
-    <div class="col-8 product-title">
-      <p>Thule Vector</p>
+
+        <div class="col-8 product-title">
+          <!-- <div class="product-name">ROOFTOP CARGO CARRIER</div> -->
+          <p>Thule Vector</p>
+        </div>
+          <!-- <div class="col-4 text-right">
+            <div class="font-weight-bold font-16">$1,399.95 </div>
+          </div> -->
+      </div>
     </div>
+
+    <!-- <div class="card-body p-0">
+      <div class="row">
+        <div class="col-8 product-title">
+          <p>Thule Vector</p>
+        </div>
+      </div>
+    </div> -->
+
+
+      <!-- <div class="colors my-2">
+        <div class="btn-group mt-0 mb-3" data-toggle="buttons" data-tooltip="tooltip" data-placement="right"
+          title="choose color">
+          <label class="btn btn-black form-check-label active">
+            <input class="form-check-input" type="radio" autocomplete="off">
+          </label>
+          <label class="btn btn-gray form-check-label">
+            <input class="form-check-input" type="radio" autocomplete="off">
+          </label>
+        </div>
+      </div> -->
+    </div> 
+  </div>
+  </div>
+  </div>
   </div>
   </div>
 
 
-  
   <div class="select-car-model">
-    <!-- model viewer start -->
     <model-viewer id="imgSize" 
       data-js-focus-visible 
       camera-controls 
-      src=""
+      src="" 
       ar disable-zoom autoplay
       shadow-intensity="0" 
       slot="progress-bar exit-webxr-ar-button interaction-prompt" 
@@ -106,37 +149,49 @@
       ar-modes="webxr quick-look" 
       ar-scale="fixed" 
       alt="Select Car">
-       <!-- Proceed button start -->
+     <!-- 
+      <button  id="ar-button">
+        Proceed 
+      </button> -->
+
       <button slot="ar-button" class="hide-apped" id="ar-button">
-        Proceed 2
+        Proceed
       </button>
+
       <button class="rounded-circle-btn ar-visible d-none" id="close-model">
         <i class="fas fa-times"></i>
       </button>
 
-        <!-- hand loading animation start -->
       <div id="ar-prompt">
         <img src="img/hand.png">
       </div>
-         <!-- model auto tranfromaing rotate start -->
+
       <div style="display: none;" id="hide-btn-main" class="right-rounded-btn table-btn">
         <div class="slider-m btn-img-bg">
           <div class="slides-mk">
             <label class="toggle-control-main d-none">
               <div class="d-none"><input id="roll" value="0" size="3" class="number"></div>
               <div class="d-none"><input id="pitch" value="0" size="3" class="number"></div>
-              <button class="d-none" id="frame"></button>
+              <!-- <input classname="checkbox" type="checkbox" id="yaw" value="0" size="3" class="number"> -->
+              <button class="d-none" id="frame">Update Framing</button>
               <div class="ar-visible d-none form-check form-switch">
                 <input class="form-check-input number" type="checkbox" id="yaw" value="270" size="3"
                   id="flexSwitchCheckDefault">
                 <label class="form-check-label" for="flexSwitchCheckDefault"></label>
               </div>
             </label>
+            <!-- <button type="button" class="btn btn-primary rounded-circle btn-white" id="nextAnimation"><i
+                class="fas fa-caret-up"></i></button>
+            <button type="button" class="btn btn-primary rounded-circle btn-white" id="previousAnimationn"><i
+                class="fas fa-caret-down"></i> </button> -->
           </div>
         </div>
-         <!-- model auto tranfromaing rotate start -->
+        <!-- <button type="button" onclick="lockBtn()" class="ar-visible d-none btn btn-primary rounded-circle btn-lock-unlock btn-white center-icons-lock">
+         Fix </button> -->
 
-         <!-- camera and size left button start -->
+
+        <!-- <button  type="button" class="ar-visible d-none btn btn-primary rounded-circle btn-lock-unlock btn-white center-icons-lock" onclick="iniFiveGlb()">Ini 5%</button> -->
+
         <div class="bottom-icons ar-visible d-none">
           <div class="btn btn-primary chat-bot-icon rounded-circle cars-btn btn-white-opcity margin-top-5 size-icons ">
             <div class="animate-img">
@@ -153,21 +208,18 @@
             <i class="fas fa-camera"></i>
           </button>
         </div>
-         <!-- camera and size left button end -->
-        <!-- up and down start -->
+
         <div class="up-down btn-img-bg">
           <button type="button" class="btn btn-primary rounded-circle btn-white" id="nextAnimation"><i
             class="fas fa-caret-up"></i></button>
         <button type="button" class="btn btn-primary rounded-circle btn-white" id="previousAnimationn"><i
             class="fas fa-caret-down"></i> </button>
         </div>
-        <!-- up and down end -->
 
-        <!-- Size and color change popup start -->
+        <!-- Chat bot UI start -->
         <div class="chat-screen">
           <div class="chat-mail">
             <div class="row">
-              <!-- Size change start -->
               <div class="col-8 size-section" id="sizeChange">
                 <div class="model-slide">
                   <button type="button" onclick="sizeSportL()"
@@ -186,10 +238,7 @@
                   <button type="button" onclick="sizeSportL()"
                     class="btn btn-primary rounded-circle btn-white d-inline-block size-btn" disabled>L </button>
                 </div>
-              </div> 
-              <!-- Size change end -->
-
-              <!-- Color change start -->
+              </div>
               <div class="col-4 color-section" id="colorChangeVariant">
                 <div class="model-slide">
                   <button type="button" value="./img/Color/Black.png" class="btn btn-primary rounded-circle btn-white d-inline-block color-btn color-black"></button>
@@ -197,51 +246,131 @@
                   <button type="button" value="./img/Color/White.png" class="btn btn-primary rounded-circle btn-white d-inline-block color-btn color-white"> </button>
                 </div>
               </div>
-              <!-- Color change end -->
             </div>
           </div>
         </div>
-         <!-- Size and color change popup End -->
       </div>
     </model-viewer>
-     <!-- Model Viewer End -->
   </div>
 
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
+
+  
 
   <!-- common Js -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+  <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+
   <!-- Loads <model-viewer> for modern browsers: -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+
   <!-- Loads <model-viewer> for old browsers like IE11: -->
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
   <!-- main Js -->
   <script src="js/main.js"></script>
 
+
+  <script type="module">
+  
+
+    // document.getElementById('videoPlay').play();
+
+    // Color Change texture
+    const modelViewerTexture = document.querySelector("model-viewer#imgSize");
+    modelViewerTexture.addEventListener("load", (ev) => {
+      let material = modelViewerTexture.model.materials[0];
+      let applyPBRTexture = (channel, event) => {
+        material.pbrMetallicRoughness[channel].texture.source.setURI(event.target.value);
+      }
+      document.querySelector('#colorChangeVariant').addEventListener('click', (event) => {
+        applyPBRTexture('baseColorTexture', event);
+      });
+    })
+
+    // // Default Change Yaw orientation Change 
+    const modelViewerTransform = document.querySelector("model-viewer#imgSize");
+    const roll = document.querySelector('#roll');
+    const pitch = document.querySelector('#pitch');
+    const yaw = document.querySelector('#yaw');
+    const frame = document.querySelector('#frame');
+
+    frame.addEventListener('click', function () {
+      modelViewerTransform.updateFraming();
+    });
+
+    const updateOrientation = () => {
+      modelViewerTransform.orientation = `${roll.value = "0"}deg ${pitch.value = "0"}deg ${yaw.value = "90"}deg `;
+    };
+
+    roll.addEventListener('input', () => {
+      updateOrientation();
+    });
+    pitch.addEventListener('input', () => {
+      updateOrientation();
+    });
+    yaw.addEventListener('input', () => {
+      updateOrientation();
+    });
+
+    $("#ar-button").click(function (e) {
+      updateOrientation();
+    });
+
+  
+    // Quick Look modes change animation
+    // const modelViewerImage = document.querySelector("model-viewer#imgSize");
+    // modelViewerImage.addEventListener("load", (ev) => {
+    //   modelViewerImage.getElementById("imgSize").style.height = "42px"
+    //   modelViewerImage.getElementById("imgSize").removeAttribute("src");
+    //   modelViewerImage.getElementById("hide-btn-main").style.display = "none";
+
+    // })
+  </script>
+
   <script>
+
     $(document).ready(function () {
-      //AR Proceed button click event triggered
-        $("#ar-button").click(function (e) {
-          document.getElementById("imgSize").setAttribute("src", "./img/glb/613500_Thule_Vector_Alpine_HP_V1_Pos0.glb");
-          $("#hide-btn-main").css("display", "block");
-          $("#hide-btn-main").css("opacity", "1");
-          $("#imgSize").css("opacity", "1");
-          $(".rounded-circle-btn").css("display", "block");
-          $('.ar-visible').removeClass("d-none")
-          document.getElementById("imgSize").style.height = "42px"
-        });
-         //AR Proceed button click event triggered
-         if (window.location.pathname == "./vector.html") {
+      
+  // AR close button 
+      $('#close-model').click(function () {
+        $('#imgSize').hide("fast");
+        $('.ar-visible').addClass("d-none")
+        document.getElementById("imgSize").removeAttribute("src");
+        window.history.go(-1)
+        //location.reload(true);
+      });
+
+      //Toggle fullscree
+      $(".chat-bot-icon").click(function (e) {
+        $(this).children('.animate-img').toggleClass('hide');
+        $(this).children('span').toggleClass('hide');
+        $(this).children('svg').toggleClass('animate');
+        $('.chat-screen').toggleClass('show-chat');
+      });
+    });
+
+    $(document).ready(function () {
+     
+      $("#ar-button").click(function (e) {
+        document.getElementById("imgSize").setAttribute("src", "./img/glb/613500_Thule_Vector_Alpine_HP_V1_Pos0.glb");
+        //document.getElementById("imgSize").setAttribute("ios-src", "./img/glb/613500_Thule_Vector_Alpine_hp_V1.usdz");
+        $("#hide-btn-main").css("display", "block");
+        $("#hide-btn-main").css("opacity", "1");
+        $("#imgSize").css("opacity", "1");
+        $(".rounded-circle-btn").css("display", "block");
+        $('.ar-visible').removeClass("d-none")
+        document.getElementById("imgSize").style.height = "42px"
+        // updateOrientation();
+      });
+
+         const modelView = document.querySelector("model-viewer#imgSize");
+        if (window.location.pathname == "./vector.html") {
           $("#hide-btn-main").css("display", "block");
           $("#imgSize").css("opactiy", "0");
           document.getElementById("imgSize").removeAttribute("src");
@@ -249,9 +378,53 @@
         } else {
           $("#hide-btn-main").css("display", "none");
           $("#imgSize").css("height", "42px");
+         // document.getElementById("imgSize").style.height = "50px".
           document.getElementById("imgSize").removeAttribute("src");
+          // document.getElementById("hide-btn-main").style.display = "none";
         }
-      });
+    });
+
+    
+
+
+
+$(".equel-grid").click(function() {
+    // Select all list items
+    var listItems = $(".equel-grid");
+    // Remove 'active' tag for all list items
+    for (let i = 0; i < listItems.length; i++) {
+        listItems[i].classList.remove("active-grid");
+    }
+    // Add 'active' tag for currently selected item
+    this.classList.add("active-grid");
+});
+
+$(".color-btn").click(function() {
+    // Select all list items
+    var listItems = $(".color-btn");
+    // Remove 'active' tag for all list items
+    for (let i = 0; i < listItems.length; i++) {
+        listItems[i].classList.remove("active-color");
+    }
+    // Add 'active' tag for currently selected item
+    this.classList.add("active-color");
+});
+
+$(".size-btn").click(function() {
+    // Select all list items
+    var listItems = $(".size-btn");
+    // Remove 'active' tag for all list items
+    for (let i = 0; i < listItems.length; i++) {
+        listItems[i].classList.remove("active-color");
+    }
+    // Add 'active' tag for currently selected item
+    this.classList.add("active-color");
+});
+
+
+
+    
+
   </script>
 
 </body>
