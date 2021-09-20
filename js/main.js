@@ -69,15 +69,6 @@ $(document).ready(function () {
       });
 
        //AR Proceed button click event triggered
-      $("#ar-button").click(function (e) {
-        document.getElementById("imgSize").setAttribute("src", "./img/glb/613500_Thule_Vector_Alpine_HP_V1_Pos0.glb");
-        $("#hide-btn-main").css("display", "block");
-        $("#hide-btn-main").css("opacity", "1");
-        $("#imgSize").css("opacity", "1");
-        $(".rounded-circle-btn").css("display", "block");
-        $('.ar-visible').removeClass("d-none")
-        document.getElementById("imgSize").style.height = "42px"
-      });
         if (window.location.pathname == "./vector.html") {
           $("#hide-btn-main").css("display", "block");
           $("#imgSize").css("opactiy", "0");
