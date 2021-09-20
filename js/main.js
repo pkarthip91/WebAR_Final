@@ -68,7 +68,17 @@ $(document).ready(function () {
         $('#modelPopup').modal('show')
       });
 
-     
+       //AR Proceed button click event triggered
+        if (window.location.pathname == "./vector.html") {
+          $("#hide-btn-main").css("display", "block");
+          $("#imgSize").css("opactiy", "0");
+          document.getElementById("imgSize").removeAttribute("src");
+          window.location.reload(true)
+        } else {
+          $("#hide-btn-main").css("display", "none");
+          $("#imgSize").css("height", "42px");
+          document.getElementById("imgSize").removeAttribute("src");
+        }
 });
 
 /**
