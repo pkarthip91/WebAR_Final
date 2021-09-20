@@ -136,7 +136,7 @@
                   alt=""> </div>
               <div class="card-body pt-3">
                 <div class="ar-button-action">
-                  <a id="motionGlb" href="motionXT.html" title="View AR" class="custom-btn-ar"><img class="icon-size" src="img/arView.png"/></a>
+                  <a id="vectorGlb" data-bs-toggle="modal" data-bs-target="#modelPopup" title="View AR" class="custom-btn-ar"><img class="icon-size" src="img/arView.png"/></a>
                 </div>
                 <!-- <div class="text-muted text-center mt-auto">Available Colors</div> -->
                 <div class="colors my-2 text-center">
@@ -165,7 +165,7 @@
                 </div>
               </div>
             </div>
-            
+
           <!-- Prodcut list motion -->
         </div>
         <!--Row End -->
@@ -319,6 +319,29 @@
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
   <!-- main Js -->
   <script src="js/main.js"></script>
+
+  <script>
+      //AR Proceed button click event triggered
+      $("#ar-button").click(function (e) {
+        document.getElementById("imgSize").setAttribute("src", "./img/glb/613500_Thule_Vector_Alpine_HP_V1_Pos0.glb");
+        $("#hide-btn-main").css("display", "block");
+        $("#hide-btn-main").css("opacity", "1");
+        $("#imgSize").css("opacity", "1");
+        $(".rounded-circle-btn").css("display", "block");
+        $('.ar-visible').removeClass("d-none")
+        document.getElementById("imgSize").style.height = "42px"
+      });
+        if (window.location.pathname == "./vector.html") {
+          $("#hide-btn-main").css("display", "block");
+          $("#imgSize").css("opactiy", "0");
+          document.getElementById("imgSize").removeAttribute("src");
+          window.location.reload(true)
+        } else {
+          $("#hide-btn-main").css("display", "none");
+          $("#imgSize").css("height", "42px");
+          document.getElementById("imgSize").removeAttribute("src");
+        }
+  </script>
 
 </body>
 </html>
