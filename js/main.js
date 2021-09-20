@@ -52,6 +52,7 @@ $(document).ready(function () {
          document.getElementById("overlayer").style.display = "none";
          }, 4000);
         // once close AR button asign this pages
+        
         location.reload(true);
       });
       //Toggle fullscree
@@ -66,6 +67,8 @@ $(document).ready(function () {
       $("#vectorGlb").click(function () {
         $('#modelPopup').modal('show')
       });
+
+     
 });
 
 /**
